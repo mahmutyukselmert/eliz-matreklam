@@ -1,0 +1,92 @@
+$primary: #eb242d;
+$primary-rgba: rgba($primary, 0.1);
+$custom-gray: rgb(124, 124, 124);
+
+$custom-theme-colors: (
+  primary: $primary,
+  gray: $custom-gray
+);
+
+@use "../node_modules/bootstrap/scss/bootstrap" with ($theme-colors: $custom-theme-colors,
+  $form-check-input-checked-bg-color: $primary,
+  $form-check-input-checked-border-color: $primary,
+  $focus-ring-width: 0,
+  $link-color: $primary,
+  $link-hover-color: $primary);
+
+html,
+body {
+  font-family: 'Red Hat Display', sans-serif;
+  background-color: #010f1d;
+}
+
+header.navbar {
+  padding: 5.3125rem 6.25rem 0 6.25rem;
+
+  .logo-wrapper {
+    img {
+      width: 13.125rem;
+      height: 6.25rem;
+      @media (max-width: 1440px) {
+        transform: scale(0.6);
+      }
+    }
+  }
+
+  .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5);
+
+    &-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+  }
+
+  .navbar-nav {
+    gap: 3.75rem;
+
+    .nav-link {
+      color: #fff;
+      font-size: 1.125rem;
+      font-weight: 400;
+      letter-spacing: 0.075em;
+      transition: color 0.3s ease;
+
+      &:hover,
+      &:focus {
+        color: $primary;
+      }
+    }
+  }
+
+  .language-wrapper {
+    a {
+      color: #fff;
+      img
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+
+  @media (max-width: 1440px) {
+    padding: 2.6563rem 1.875rem 0 1.875rem;
+    .navbar-nav {
+      gap: 1.875rem;
+    }
+  }
+}
+
+.services-section {
+  h1 {
+    font-size: 3rem;
+    font-weight: bolder;
+    text-align: center;
+    color: #fff;
+  }
+  p {
+    font-size: 1.125rem;
+    font-weight: 300;
+    color: #fff;
+    text-align: center;
+  }
+}
