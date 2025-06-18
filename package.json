@@ -4,9 +4,10 @@
   "description": "",
   "scripts": {
     "dev-scss": "sass src/style.scss public/assets/css/main.css --watch",
-    "dev-bsync": "browser-sync start --proxy 'localhost:8000/public' --files 'public/**/*.php,public/assets/css/*.css,public/assets/js/*.js'",
+    "dev-bsync": "browser-sync start --proxy 'localhost:8000/public' --files 'public/**/*.html,public/**/*.php,public/assets/css/*.css,public/assets/js/*.js'",
     "dev-js": "esbuild src/main.js --bundle --minify --outfile=public/assets/js/main.js --watch",
-    "dev": "npm-run-all --parallel dev-scss dev-js dev-bsync",
+    "dev-php": "php -S localhost:8000 -t public/",
+    "dev": "npm-run-all --parallel dev-scss dev-js dev-bsync dev-php",
     "build-scss": "sass src/style.scss public/assets/css/main.css",
     "build-postcss": "postcss public/assets/css/main.css -o public/assets/css/main.min.css",
     "build-postcss-font": "postcss src/font.css -o public/assets/css/font.css",

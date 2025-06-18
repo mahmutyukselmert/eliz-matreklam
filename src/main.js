@@ -49,3 +49,30 @@ ScrollReveal().reveal('.scroll-reveal-top', {
   distance: '50px',
   easing: 'ease-in-out'
 });
+
+/* Navbar Scroll */
+const navbar = document.querySelector('.navbar');
+
+function handleScroll() {
+  const footer = document.getElementById("footer");
+  const scrollToTop = document.getElementById("scroll-to-top");
+
+  if (window.scrollY > 50) {
+    navbar.classList.add('navbar-scrolled');
+  } else {
+    navbar.classList.remove('navbar-scrolled');
+  }
+
+  const footerPosition = footer.getBoundingClientRect();
+  const windowHeight = window.innerHeight;
+
+  if (footerPosition.top < windowHeight) {
+    scrollToTop.classList.remove("d-none");
+  } else {
+    scrollToTop.classList.add("d-none");
+  }
+}
+
+document.addEventListener('DOMContentLoaded', handleScroll);
+window.addEventListener('scroll', handleScroll);
+/* Navbar Scroll - End */
