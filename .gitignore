@@ -14,4 +14,4 @@ node_modules/
 # NPM cache
 .npm
 
-/public/assets/media/*
+./public/assets/media/*.mp4
