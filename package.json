@@ -12,7 +12,8 @@
     "build-postcss": "postcss public/assets/css/main.css -o public/assets/css/main.min.css",
     "build-postcss-font": "postcss src/font.css -o public/assets/css/font.css",
     "build-js": "esbuild src/main.js --bundle --minify --outfile=public/assets/js/main.js",
-    "build": "npm run build-scss && npm run build-postcss && npm run build-postcss-font && npm run build-js",
+    "build-slider-js": "esbuild src/slider.js --bundle --minify --outfile=public/assets/js/slider.min.js",
+    "build": "npm run build-scss && npm run build-postcss && npm run build-postcss-font && npm run build-js && npm run build-slider-js",
     "build-image": "node src/image.js"
   },
   "author": "Mahmut Yüksel MERT",
@@ -35,6 +36,7 @@
     "imagemin": "^9.0.1",
     "imagemin-webp": "^8.0.0",
     "sass": "^1.89.2",
-    "scrollreveal": "^4.0.9"
+    "scrollreveal": "^4.0.9",
+    "swiper": "^11.2.8"
   }
 }

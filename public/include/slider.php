@@ -18,8 +18,8 @@
                                     <p class="hero-subtitle">Profesyonel reklam ve tanıtım materyalleriyle markanızı öne
                                         çıkarın</p>
                                     <div class="hero-buttons">
-                                        <a href="#services" class="btn btn-primary hero-btn">Hizmetlerimizi Keşfedin</a>
-                                        <a href="#contact" class="btn btn-outline-light hero-btn">İletişime Geçin</a>
+                                        <a href="#services" class="btn btn-primary hero-btn">Hizmetlerimiz</a>
+                                        <a href="#contact" class="btn btn-outline-light hero-btn">İletişim</a>
                                     </div>
                                 </div>
                             </div>
@@ -41,8 +41,8 @@
                                     <p class="hero-subtitle">Profesyonel reklam ve tanıtım materyalleriyle markanızı öne
                                         çıkarın</p>
                                     <div class="hero-buttons">
-                                        <a href="#services" class="btn btn-primary hero-btn">Hizmetlerimizi Keşfedin</a>
-                                        <a href="#contact" class="btn btn-outline-light hero-btn">İletişime Geçin</a>
+                                        <a href="#services" class="btn btn-primary hero-btn">Hizmetlerimiz</a>
+                                        <a href="#contact" class="btn btn-outline-light hero-btn">İletişim</a>
                                     </div>
                                 </div>
                             </div>
@@ -64,8 +64,8 @@
                                     <p class="hero-subtitle">Profesyonel reklam ve tanıtım materyalleriyle markanızı öne
                                         çıkarın</p>
                                     <div class="hero-buttons">
-                                        <a href="#services" class="btn btn-primary hero-btn">Hizmetlerimizi Keşfedin</a>
-                                        <a href="#contact" class="btn btn-outline-light hero-btn">İletişime Geçin</a>
+                                        <a href="#services" class="btn btn-primary hero-btn">Hizmetlerimiz</a>
+                                        <a href="#contact" class="btn btn-outline-light hero-btn">İletişim</a>
                                     </div>
                                 </div>
                             </div>
@@ -89,8 +89,8 @@
                                     <p class="hero-subtitle">Profesyonel reklam ve tanıtım materyalleriyle markanızı öne
                                         çıkarın</p>
                                     <div class="hero-buttons">
-                                        <a href="#services" class="btn btn-primary hero-btn">Hizmetlerimizi Keşfedin</a>
-                                        <a href="#contact" class="btn btn-outline-light hero-btn">İletişime Geçin</a>
+                                        <a href="#services" class="btn btn-primary hero-btn">Hizmetlerimiz</a>
+                                        <a href="#contact" class="btn btn-outline-light hero-btn">İletişim</a>
                                     </div>
                                 </div>
                             </div>
@@ -112,8 +112,8 @@
                                     <p class="hero-subtitle">Kurumsal kimliğinizi güçlendiren profesyonel baskı
                                         hizmetleri</p>
                                     <div class="hero-buttons">
-                                        <a href="#services" class="btn btn-primary hero-btn">Hizmetlerimizi Keşfedin</a>
-                                        <a href="#contact" class="btn btn-outline-light hero-btn">İletişime Geçin</a>
+                                        <a href="#services" class="btn btn-primary hero-btn">Hizmetlerimiz</a>
+                                        <a href="#contact" class="btn btn-outline-light hero-btn">İletişim</a>
                                     </div>
                                 </div>
                             </div>
@@ -135,8 +135,8 @@
                                     <p class="hero-subtitle">Web tasarımından dijital reklama kadar tüm ihtiyaçlarınız
                                     </p>
                                     <div class="hero-buttons">
-                                        <a href="#services" class="btn btn-primary hero-btn">Hizmetlerimizi Keşfedin</a>
-                                        <a href="#contact" class="btn btn-outline-light hero-btn">İletişime Geçin</a>
+                                        <a href="#services" class="btn btn-primary hero-btn">Hizmetlerimiz</a>
+                                        <a href="#contact" class="btn btn-outline-light hero-btn">İletişim</a>
                                     </div>
                                 </div>
                             </div>
@@ -157,8 +157,8 @@
                                     <h1 class="hero-title">Yaratıcı Tasarım</h1>
                                     <p class="hero-subtitle">Markanıza özel yaratıcı ve etkili tasarım çözümleri</p>
                                     <div class="hero-buttons">
-                                        <a href="#services" class="btn btn-primary hero-btn">Hizmetlerimizi Keşfedin</a>
-                                        <a href="#contact" class="btn btn-outline-light hero-btn">İletişime Geçin</a>
+                                        <a href="#services" class="btn btn-primary hero-btn">Hizmetlerimiz</a>
+                                        <a href="#contact" class="btn btn-outline-light hero-btn">İletişim</a>
                                     </div>
                                 </div>
                             </div>
@@ -179,8 +179,8 @@
                                     <h1 class="hero-title">Profesyonel Hizmet</h1>
                                     <p class="hero-subtitle">15 yıllık deneyimimizle size en iyi hizmeti sunuyoruz</p>
                                     <div class="hero-buttons">
-                                        <a href="#services" class="btn btn-primary hero-btn">Hizmetlerimizi Keşfedin</a>
-                                        <a href="#contact" class="btn btn-outline-light hero-btn">İletişime Geçin</a>
+                                        <a href="#services" class="btn btn-primary hero-btn">Hizmetlerimiz</a>
+                                        <a href="#contact" class="btn btn-outline-light hero-btn">İletişim</a>
                                     </div>
                                 </div>
                             </div>
@@ -202,8 +202,8 @@
                                     <h1 class="hero-title">Premium Mağaza Çözümleri</h1>
                                     <p class="hero-subtitle">Lüks ve şık tasarımlarla markanıza değer katın</p>
                                     <div class="hero-buttons">
-                                        <a href="#services" class="btn btn-primary hero-btn">Hizmetlerimizi Keşfedin</a>
-                                        <a href="#contact" class="btn btn-outline-light hero-btn">İletişime Geçin</a>
+                                        <a href="#services" class="btn btn-primary hero-btn">Hizmetlerimiz</a>
+                                        <a href="#contact" class="btn btn-outline-light hero-btn">İletişim</a>
                                     </div>
                                 </div>
                             </div>
@@ -224,8 +224,8 @@
                                     <h1 class="hero-title">Elit Ofis Çözümleri</h1>
                                     <p class="hero-subtitle">Prestijli kurumsal kimlik materyalleri</p>
                                     <div class="hero-buttons">
-                                        <a href="#services" class="btn btn-primary hero-btn">Hizmetlerimizi Keşfedin</a>
-                                        <a href="#contact" class="btn btn-outline-light hero-btn">İletişime Geçin</a>
+                                        <a href="#services" class="btn btn-primary hero-btn">Hizmetlerimiz</a>
+                                        <a href="#contact" class="btn btn-outline-light hero-btn">İletişim</a>
                                     </div>
                                 </div>
                             </div>
@@ -246,8 +246,8 @@
                                     <h1 class="hero-title">Premium Dijital Çözümler</h1>
                                     <p class="hero-subtitle">Gelişmiş teknoloji ile modern tasarım</p>
                                     <div class="hero-buttons">
-                                        <a href="#services" class="btn btn-primary hero-btn">Hizmetlerimizi Keşfedin</a>
-                                        <a href="#contact" class="btn btn-outline-light hero-btn">İletişime Geçin</a>
+                                        <a href="#services" class="btn btn-primary hero-btn">Hizmetlerimiz</a>
+                                        <a href="#contact" class="btn btn-outline-light hero-btn">İletişim</a>
                                     </div>
                                 </div>
                             </div>
@@ -268,8 +268,8 @@
                                     <h1 class="hero-title">Sanatsal Tasarım</h1>
                                     <p class="hero-subtitle">Estetik ve işlevselliği birleştiren çözümler</p>
                                     <div class="hero-buttons">
-                                        <a href="#services" class="btn btn-primary hero-btn">Hizmetlerimizi Keşfedin</a>
-                                        <a href="#contact" class="btn btn-outline-light hero-btn">İletişime Geçin</a>
+                                        <a href="#services" class="btn btn-primary hero-btn">Hizmetlerimiz</a>
+                                        <a href="#contact" class="btn btn-outline-light hero-btn">İletişim</a>
                                     </div>
                                 </div>
                             </div>
@@ -290,8 +290,8 @@
                                     <h1 class="hero-title">Mükemmel Hizmet</h1>
                                     <p class="hero-subtitle">Size özel çözümlerle fark yaratıyoruz</p>
                                     <div class="hero-buttons">
-                                        <a href="#services" class="btn btn-primary hero-btn">Hizmetlerimizi Keşfedin</a>
-                                        <a href="#contact" class="btn btn-outline-light hero-btn">İletişime Geçin</a>
+                                        <a href="#services" class="btn btn-primary hero-btn">Hizmetlerimiz</a>
+                                        <a href="#contact" class="btn btn-outline-light hero-btn">İletişim</a>
                                     </div>
                                 </div>
                             </div>
@@ -305,14 +305,14 @@
 
         <!-- Slider Controls -->
         <div class="slider-controls">
-            <button class="control-btn prev-btn" id="heroPrevBtn">
+            <button class="control-btn prev-btn" id="heroPrevBtn" aria-label="Önceki Slayt">
                 <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
                     viewBox="0 0 24 24">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="m15 19-7-7 7-7" />
                 </svg>
             </button>
-            <button class="control-btn next-btn" id="heroNextBtn">
+            <button class="control-btn next-btn" id="heroNextBtn" aria-label="Sonraki Slayt">
                 <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
                     viewBox="0 0 24 24">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
