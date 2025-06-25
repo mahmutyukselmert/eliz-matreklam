@@ -15,4 +15,8 @@ node_modules/
 .npm
 
 public/assets/media/
-**/assets/media/
+**/public/assets/media/
+
+
+.DS_Store
+**/.DS_Store
