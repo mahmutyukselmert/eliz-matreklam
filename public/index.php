@@ -72,7 +72,7 @@
                                         <h2 class="card-title">Dış Mekan Baskıları</h2>
                                         <p class="card-text">Zorlu hava koşullarına dayanıklı, yüksek kaliteli dış mekan baskılarıyla
                                             markanızı açık alanda güçlü ve kalıcı şekilde görünür kılıyoruz.</p>
-                                        <a href="#" href="hizmet-detay.php" class="card-link stretched-link">Daha Fazla Bilgi</a>
+                                        <a href="#" href="hizmet-detay.php" title="" class="card-link stretched-link">Daha Fazla Bilgi</a>
                                     </div>
                                 </div>
                                 <div class="col-lg-5 col-md-12 col-12 card-image-col">
@@ -183,7 +183,7 @@
             </div>
             <div class="container-fluid">
                 <div class="row justify-content-center scroll-reveal-top">
-                    <div class="col-lg-11">
+                    <div class="col-10 col-lg-11">
                         <div class="references-slider-container">
                             <button class="slider-btn slider-btn-prev" id="prevBtn">
                                 <svg width="20" height="20" fill="white" viewBox="0 0 24 24">

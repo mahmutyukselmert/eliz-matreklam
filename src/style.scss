@@ -1181,8 +1181,14 @@ header {
       margin-bottom: 30px;
       font-family: "Red Hat Display", sans-serif;
       display: flex;
+      padding: 1rem;
+      border-radius: 0.625rem;
+      align-items: center;
+      background: linear-gradient(90deg, rgb(2, 21, 38) 10%, rgb(3, 24, 44) 30%, rgb(10, 48, 85) 100%);
+
       p {
         margin-left: 1.25rem;
+        margin-bottom: 0;
       }
       svg {
         width: 46px;
@@ -1277,7 +1283,6 @@ header {
         display: flex;
         transition: transform 0.5s ease;
         gap: 32px;
-        overflow: hidden;
         cursor: pointer;
       }
 
@@ -1305,8 +1310,7 @@ header {
         }
 
         @media (max-width: 36rem) {
-          width: 75%; // 1 item
-          gap: 16px;
+          width: 100%; // Mobil için tam genişlikte tek öğe
         }
 
         .reference-box {

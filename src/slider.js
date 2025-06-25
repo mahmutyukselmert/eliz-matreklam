@@ -358,37 +358,60 @@ document.addEventListener("DOMContentLoaded", function () {
 
   showSlide(0);
 
-  const slider = document.getElementById("referenceItemsWrapper");
+/* Referances Slider */
+const slider = document.getElementById("referenceItemsWrapper");
   if (slider) {
     const refPrevBtn = document.getElementById("prevBtn");
     const refNextBtn = document.getElementById("nextBtn");
-    const items = document.querySelectorAll(".reference-item");
+    const items = document.querySelectorAll(".reference-item"); // Tüm öğeleri bir kez al
 
     let refCurrentIndex = 0;
-    let itemsToShow = getItemsToShow();
-    let maxIndex = Math.max(0, items.length - itemsToShow);
+    let itemsToShow = getItemsToShow(); // Görünürdeki öğe sayısını belirler
+    let maxIndex = Math.max(0, items.length - itemsToShow); // Maksimum kaydırma indeksi
+    let refAutoSlideInterval;
 
     function getItemsToShow() {
       const width = window.innerWidth;
+      // Bu değerler SCSS'deki medya sorgularınızla uyumlu olmalı
       if (width >= 1400) return 6;
       if (width >= 1200) return 5;
       if (width >= 992) return 4;
       if (width >= 768) return 3;
       if (width >= 576) return 2;
-      return 1;
+      return 1; // Mobil için 1 görsel
     }
 
-    function getSlideWidth() {
-      const containerWidth = slider.parentElement.offsetWidth;
-      const gap = 32; // 2rem gap
+    // SLIDER KAYMA MİKTARINI HESAPLAYAN KRİTİK FONKSİYON
+    function getSlideStep() {
+      if (items.length === 0) return 0; // Hata önleme
+
       const itemsVisible = getItemsToShow();
+      const firstItem = items[0];
+      const itemWidth = firstItem.offsetWidth; // Bir öğenin genişliği (padding ve border dahil)
 
-      return (containerWidth + gap) / itemsVisible;
+      // gap değerini wrapper'dan alıyoruz
+      const wrapperStyle = window.getComputedStyle(slider); // slider (referenceItemsWrapper)
+      const gap = parseInt(wrapperStyle.gap) || 0;
+
+      // Eğer 1 öğe gösteriliyorsa, kaydırma miktarı 1 öğe genişliği + gap olmalı
+      if (itemsVisible === 1) {
+        return itemWidth + gap;
+      } else {
+        // Birden fazla öğe gösteriliyorsa, bir öğenin genişliği + gap kadar kaydır
+        // Bu durumda görseldeki yarım görünen durumu engellemek için her zaman bir öğe kadar ilerliyoruz.
+        return itemWidth + gap;
+      }
     }
+
 
     function updateSlider() {
-      const slideWidth = getSlideWidth();
-      const translateX = refCurrentIndex * slideWidth;
+      // itemsToShow'u her güncellemede yeniden hesapla
+      itemsToShow = getItemsToShow();
+      maxIndex = Math.max(0, items.length - itemsToShow);
+
+      const slideStep = getSlideStep(); // Kaydırma adımını al
+      const translateX = refCurrentIndex * slideStep; // Toplam kaydırma miktarını hesapla
+
       slider.style.transform = `translateX(-${translateX}px)`;
 
       refPrevBtn.disabled = refCurrentIndex === 0;
@@ -398,58 +421,81 @@ document.addEventListener("DOMContentLoaded", function () {
     function slideNext() {
       if (refCurrentIndex < maxIndex) {
         refCurrentIndex++;
-        updateSlider();
+      } else {
+        // Son slayta gelindiğinde başa dön
+        refCurrentIndex = 0;
       }
+      updateSlider();
     }
 
     function slidePrev() {
       if (refCurrentIndex > 0) {
         refCurrentIndex--;
-        updateSlider();
+      } else {
+        // Başa gelindiğinde sona dön
+        refCurrentIndex = maxIndex;
       }
+      updateSlider();
     }
 
     if (refNextBtn) refNextBtn.addEventListener("click", slideNext);
     if (refPrevBtn) refPrevBtn.addEventListener("click", slidePrev);
 
-    let refAutoSlideInterval = setInterval(() => {
-      if (refCurrentIndex >= maxIndex) {
-        refCurrentIndex = 0;
-      } else {
-        refCurrentIndex++;
-      }
-      updateSlider();
-    }, 4000);
+    function startAutoSlide() {
+      if (refAutoSlideInterval) clearInterval(refAutoSlideInterval);
+      // slideNext'i çağırırken, her zaman tek bir adım ilerlemesini sağlarız.
+      refAutoSlideInterval = setInterval(slideNext, 4000);
+    }
+
+    function stopAutoSlide() {
+      clearInterval(refAutoSlideInterval);
+    }
+
+    // Intersection Observer API ile slider'ın görünürlüğünü izle
+    const referencesSection = document.querySelector(".referances-section");
+    if (referencesSection) {
+      const observerOptions = {
+        root: null, // viewport'ı referans al
+        rootMargin: "0px",
+        threshold: 0.5, // Bölümün %50'si görünür olduğunda
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            startAutoSlide();
+          } else {
+            stopAutoSlide();
+          }
+        });
+      }, observerOptions);
+
+      observer.observe(referencesSection);
+    }
 
     const refSliderContainer = document.querySelector(
       ".references-slider-container"
     );
     if (refSliderContainer) {
-      refSliderContainer.addEventListener("mouseenter", () => {
-        clearInterval(refAutoSlideInterval);
-      });
-
-      refSliderContainer.addEventListener("mouseleave", () => {
-        refAutoSlideInterval = setInterval(() => {
-          if (refCurrentIndex >= maxIndex) {
-            refCurrentIndex = 0;
-          } else {
-            refCurrentIndex++;
-          }
-          updateSlider();
-        }, 4000);
-      });
+      refSliderContainer.addEventListener("mouseenter", stopAutoSlide);
+      refSliderContainer.addEventListener("mouseleave", startAutoSlide);
     }
 
     window.addEventListener("resize", () => {
+      // Boyut değiştiğinde görünür öğe sayısını ve maksimum indeksi yeniden hesapla
       itemsToShow = getItemsToShow();
       maxIndex = Math.max(0, items.length - itemsToShow);
+      // refCurrentIndex'i güncel maxIndex içinde tut, taşmayı önle
       refCurrentIndex = Math.min(refCurrentIndex, maxIndex);
       updateSlider();
+      // Yeniden boyutlandırmadan sonra, autoplay'i durdurup yeniden başlatmak isteyebilirsiniz
+      // Ancak Intersection Observer zaten bunu yönetecektir.
     });
 
+    // Sayfa yüklendiğinde slider'ı başlangıç durumuna getir
     if (items.length > 0) {
       updateSlider();
     }
   }
+
 });
