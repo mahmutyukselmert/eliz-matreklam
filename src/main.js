@@ -50,3 +50,24 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('scroll', handleScroll);
   /* Navbar Scroll - End */
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const header = document.querySelector("header.navbar");
+  const logo = header.querySelector("img.img-fluid");
+  const originalSrc = logo.getAttribute("src");
+  const scrolledSrc = logo.dataset.scrolledimage;
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 20) {
+      if (!header.classList.contains("navbar-scrolled")) {
+        header.classList.add("navbar-scrolled");
+        logo.setAttribute("src", scrolledSrc);
+      }
+    } else {
+      if (header.classList.contains("navbar-scrolled")) {
+        header.classList.remove("navbar-scrolled");
+        logo.setAttribute("src", originalSrc);
+      }
+    }
+  });
+});

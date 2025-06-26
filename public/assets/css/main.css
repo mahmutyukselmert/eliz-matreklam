@@ -11318,6 +11318,9 @@ header.navbar {
     height: 112px;
   }
 }
+header.navbar .logo-wrapper .navbar-brand {
+  display: flex;
+}
 header.navbar .logo-wrapper img {
   width: 150px;
   height: auto;
@@ -11520,12 +11523,35 @@ header.navbar .language-wrapper a:hover {
     margin: 0;
   }
 }
+header.navbar .scrolled-logo {
+  display: none;
+}
 header.navbar-scrolled {
   background: #021526;
   background: linear-gradient(90deg, rgb(2, 21, 38) 10%, rgb(3, 24, 44) 30%, rgb(10, 48, 85) 100%);
   border: 0;
   position: fixed;
   height: 112px;
+}
+@media (min-width: 1200px) and (max-width: 1440px) {
+  header.navbar-scrolled .navbar-collapse {
+    height: 53.5008px;
+  }
+}
+@media (min-width: 1440px) {
+  header.navbar-scrolled .navbar-collapse {
+    height: 82.92px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1440px) {
+  header.navbar-scrolled .language-wrapper {
+    height: 53.5008px;
+  }
+}
+@media (min-width: 1440px) {
+  header.navbar-scrolled .language-wrapper {
+    height: 82.92px;
+  }
 }
 
 .hero-video-slider {
@@ -11888,7 +11914,7 @@ header.navbar-scrolled {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(6rem);
+    transform: translateY(2rem);
   }
   100% {
     transform: translateY(0rem);
@@ -11934,11 +11960,11 @@ header.navbar-scrolled {
   animation: up-down-float 4s ease-in-out infinite;
 }
 .hero-section.services-page h1 {
-  font-size: 1.875rem;
+  font-size: 1.625rem;
   font-weight: 500;
 }
 .hero-section.services-page h2 {
-  font-size: 3rem;
+  font-size: 2.25rem;
   font-weight: 800;
 }
 .hero-section.services-page h3 {
@@ -11948,6 +11974,7 @@ header.navbar-scrolled {
 .hero-section.services-page p {
   font-size: 1.125rem;
   font-weight: 300;
+  color: #e6e6e6;
 }
 .hero-section.services-page .rotating-container {
   position: relative;
@@ -12002,7 +12029,7 @@ header.navbar-scrolled {
   background-attachment: fixed;
 }
 .hero-section.blog-page h1 {
-  font-size: 1.875rem;
+  font-size: 1.625rem;
   font-weight: 500;
 }
 .hero-section.contact-page {
@@ -12029,11 +12056,11 @@ header.navbar-scrolled {
   animation: up-down-float 10s ease-in-out infinite;
 }
 .hero-section.contact-page h1 {
-  font-size: 1.875rem;
+  font-size: 1.625rem;
   font-weight: 500;
 }
 .hero-section.contact-page h2 {
-  font-size: 48px;
+  font-size: 36px;
   font-weight: 800;
 }
 .hero-section.referances-page {
@@ -12060,11 +12087,11 @@ header.navbar-scrolled {
   animation: up-down-float 10s ease-in-out infinite;
 }
 .hero-section.referances-page h1 {
-  font-size: 1.875rem;
+  font-size: 1.625rem;
   font-weight: 500;
 }
 .hero-section.referances-page h2 {
-  font-size: 48px;
+  font-size: 36px;
   font-weight: 800;
 }
 @media (max-width: 1280px) {
@@ -12258,7 +12285,7 @@ header.navbar-scrolled {
 
 .services-page,
 .blog-page {
-  margin-bottom: 5rem;
+  margin-bottom: 0rem;
 }
 .services-page .card-content-row,
 .blog-page .card-content-row {
@@ -12332,6 +12359,11 @@ header.navbar-scrolled {
   margin-left: 1.25rem;
   margin-bottom: 0;
 }
+@media (max-width: 1280px) {
+  .contact-area ul li p {
+    font-size: 1rem;
+  }
+}
 .contact-area ul li svg {
   width: 46px;
   height: 36px;
@@ -12342,6 +12374,11 @@ header.navbar-scrolled {
   color: #fff;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
+}
+@media (max-width: 1280px) {
+  .contact-area {
+    padding: 60px 0 0 0 !important;
+  }
 }
 
 .referances-section {
@@ -12557,12 +12594,21 @@ header.navbar-scrolled {
   border-radius: 0.625rem;
   transition: all 0.3s ease-in-out;
   object-fit: cover;
+  height: 630px;
 }
 .contact-us-section .cu-left-image img {
   transition: all 0.3s ease-in-out;
+  border-radius: 0.625rem;
+  width: 100%;
+  object-fit: cover;
 }
 .contact-us-section .cu-left-image img:hover {
   transform: scale(1.1);
+}
+@media (max-width: 768px) {
+  .contact-us-section .cu-left-image {
+    height: 330px;
+  }
 }
 .contact-us-section form .form-floating label {
   color: #fff;
@@ -12661,6 +12707,11 @@ footer .footer-box {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 1280px) {
+  footer .footer-box {
+    margin-top: 0;
+  }
+}
 footer .footer-box .footer-left,
 footer .footer-box .footer-center,
 footer .footer-box .footer-right {
@@ -12720,6 +12771,7 @@ footer .our-logo-box a {
 }
 footer .our-logo-box a img {
   transition: all 0.3s ease;
+  width: 85px;
 }
 footer .our-logo-box a:hover img {
   transform: scale(0.9);
@@ -12860,7 +12912,7 @@ footer .copyright-box .privacy-policy a {
 }
 @media (max-width: 768px) {
   .rotating-ball-container {
-    width: 16rem;
+    width: 14rem;
     height: auto;
     min-height: 15rem;
   }
@@ -12953,6 +13005,14 @@ footer .copyright-box .privacy-policy a {
 }
 .swiper .swiper-scrollbar-drag {
   background: rgba(255, 255, 255, 0.8);
+}
+
+#services .swiper-wrapper .swiper-slide {
+  height: 600px;
+}
+#services .swiper-wrapper .swiper-slide img {
+  height: 100%;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=main.css.map */
